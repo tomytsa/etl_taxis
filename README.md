@@ -40,7 +40,7 @@ Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con 
 
 ## Construcción y Ejecución
 
-1. Construye la imagen Docker:
+1. Como primer paso, construimos la imagen de Docker, las instrucciones que le damos estan en el Dockerfile
 
     ```sh
     docker build -t my_etl_taxi .
@@ -52,10 +52,10 @@ Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con 
     docker-compose up -d
     ```
 
-3. Ejecuta el contenedor Docker para cargar los datos en la base de datos:
+3. Por ultimo, corremos el contenedor my_etl_taxi (el script para subir los datos a PostgreSQL), tenemos que completar las variables con los mismos datos que en el archivo .env:
 
     ```sh
-    docker run -it --network=docker_sql_default my_etl_taxi --file_path=data/yellow_tripdata_2021-01.csv --user=postgres --password=mysecretpassword --host=pgdatabase --port=5432 --db=postgres --table_name=yellow_taxi_data
+    docker run -it --network=docker_sql_default my_etl_taxi --user= --password= --host= --port= --db= --table_name=yellow_taxi_data
     ```
 
 ## Verificación
@@ -66,5 +66,6 @@ Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con 
 
 ## Notas
 
-- Asegúrate de que Docker y Docker Compose estén instalados en tu máquina.
+- Lo mas importante es tener instalado Docker Desktop, en Windows y Mac se instala con Docker-Compose, en Linux hay que instalar las dos cosas por separado.
 - La carpeta `data` y el archivo `yellow_tripdata_2021-01.csv` no se subirán a GitHub debido a su tamaño. Asegúrate de tenerlos localmente antes de ejecutar los comandos.
+- El proceso funciona para cualquier archivo CSV, no es necesario tener el mismo que yo, lo que hay que hacer si usas un archivo diferente al mio es cambiar la variable file_path en main.py, otra opcion seria agregar esa variable en el comando docker run
