@@ -55,7 +55,7 @@ Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con 
 3. Por ultimo, corremos el contenedor my_etl_taxi (el script para subir los datos a PostgreSQL), tenemos que completar las variables con los mismos datos que en el archivo .env:
 
     ```sh
-    docker run -it --network=docker_sql_default my_etl_taxi --user= --password= --host= --port= --db= --table_name=yellow_taxi_data
+    docker run -it --network=etl_taxi_default my_etl_taxi --user= --password= --host= --port= --db= --table_name=yellow_taxi_data
     ```
 
 ## Verificación
@@ -69,3 +69,4 @@ Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con 
 - Lo mas importante es tener instalado Docker Desktop, en Windows y Mac se instala con Docker-Compose, en Linux hay que instalar las dos cosas por separado.
 - La carpeta `data` y el archivo `yellow_tripdata_2021-01.csv` no se subirán a GitHub debido a su tamaño. Asegúrate de tenerlos localmente antes de ejecutar los comandos.
 - El proceso funciona para cualquier archivo CSV, no es necesario tener el mismo que yo, lo que hay que hacer si usas un archivo diferente al mio es cambiar la variable file_path en main.py, otra opcion seria agregar esa variable en el comando docker run
+- Lo ultimo que hay que tener en cuenta es los contenedores de PostgreSQL, PGADMIN y de Python, tienen que correrse en la misma network, los primeros dos, estan en la misma network por defecto porque los levante con docker-compose, pero el de python hay que agregarlo, por eso en el comando docker run agregue la variable --network=etl_taxi_default (docker-compose por defecto te crea una network con el nombre de la carpeta y _default al final)
