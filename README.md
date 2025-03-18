@@ -6,7 +6,7 @@ En este proyecto busque desarrollar un proceso ETL, que pase un archivo CSV a un
 
 - Docker
   
-Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con las versiones de Python, y Docker es una excelente herramiento para solucionar este problema. La otra opcion es una VM, pero los contenedores de Docker son mucho mas livianos
+Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con las versiones de Python, y Docker es una excelente herramienta para solucionar este problema. La otra opcion es una VM, pero los contenedores de Docker son mucho mas livianos
 
 ## Configuración
 
