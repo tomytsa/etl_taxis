@@ -20,11 +20,11 @@ Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con 
 2. Hay que crear un archivo `.env` en la raíz del proyecto con las siguientes variables de entorno:
 
     ```env
-    POSTGRES_USER=postgres
-    POSTGRES_PASSWORD=mysecretpassword
-    POSTGRES_DB=postgres
-    PGADMIN_DEFAULT_EMAIL=admin@admin.com
-    PGADMIN_DEFAULT_PASSWORD=root
+    POSTGRES_USER=
+    POSTGRES_PASSWORD=
+    POSTGRES_DB=
+    PGADMIN_DEFAULT_EMAIL=
+    PGADMIN_DEFAULT_PASSWORD=
     ```
 
 3. Asegúrate de que la carpeta `data` y el archivo `yellow_tripdata_2021-01.csv` estén presentes en el directorio correcto.
