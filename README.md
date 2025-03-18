@@ -1,4 +1,4 @@
-# ETL Taxis de New York
+# ETL - Taxis de New York
 
 En este proyecto busque desarrollar un proceso ETL, que pase un archivo CSV a una base de datos PostgreSQL. Fue interesante ya que el CSV tenia millones de filas, entonces tuve que dividirlos en chunks con Pandas. 
 
