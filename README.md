@@ -10,14 +10,14 @@ Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con 
 
 ## Configuración
 
-1. Clona el repositorio:
+1. Lo primero que hay que hacer es clonar el repositorio 
 
     ```sh
-    git clone <URL_DEL_REPOSITORIO>
-    cd <NOMBRE_DEL_REPOSITORIO>
+    git clone https://github.com/tomytsa/etl_taxis
+    cd etl_taxis
     ```
 
-2. Crea un archivo `.env` en la raíz del proyecto con las siguientes variables de entorno:
+2. Hay que crear un archivo `.env` en la raíz del proyecto con las siguientes variables de entorno:
 
     ```env
     POSTGRES_USER=postgres
