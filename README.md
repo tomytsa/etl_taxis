@@ -1,11 +1,11 @@
 # ETL Taxis
 
-Este proyecto es una aplicación ETL (Extract, Transform, Load) para procesar datos de taxis y cargarlos en una base de datos PostgreSQL.
+En este proyecto busque desarrollar un proceso ETL, que pase un archivo CSV a una base de datos PostgreSQL. Fue interesante ya que el CSV tenia millones de filas, entonces tuve que dividirlos en chunks con Pandas. 
 
 ## Requisitos
 
 - Docker
-- Docker Compose
+  Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con las versiones de Python, y Docker es una excelente herramiento para solucionar este problema. La otra opcion es una VM, pero los contenedores de Docker son mucho mas livianos
 
 ## Configuración
 
