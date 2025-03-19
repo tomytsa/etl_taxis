@@ -70,3 +70,7 @@ Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con 
 - La carpeta `data` y el archivo `yellow_tripdata_2021-01.csv` no los subi a GitHub por el tamaño. Asegúrate de tenerlos localmente antes de ejecutar los comandos.
 - El proceso funciona para cualquier archivo CSV, no es necesario tener el mismo que yo, lo que hay que hacer si usas un archivo diferente al mio es cambiar la variable file_path en main.py, otra opcion seria agregar esa variable en el comando docker run
 - Lo ultimo que hay que tener en cuenta es los contenedores de PostgreSQL, PGADMIN y de Python, tienen que correrse en la misma network, los primeros dos, estan en la misma network por defecto porque los levante con docker-compose, pero el de python hay que agregarlo, por eso en el comando docker run agregue la variable --network=etl_taxi_default (docker-compose por defecto te crea una network con el nombre de la carpeta y _default al final)
+
+## Mejoras e implementaciones
+
+- Desplegar los datos en PowerBI
