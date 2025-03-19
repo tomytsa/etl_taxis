@@ -17,7 +17,7 @@ Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con 
     cd etl_taxis
     ```
 
-2. Hay que crear un archivo `.env` en la raíz del proyecto con las siguientes variables de entorno:
+2. Hay que crear un archivo `.env` en la raíz del proyecto con las siguientes variables de entorno (completar con lo que corresponda):
 
     ```env
     POSTGRES_USER=
