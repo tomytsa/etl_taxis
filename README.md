@@ -27,7 +27,7 @@ Opte por dockerizar la aplicación, ya que habia empezado a tener problemas con 
     PGADMIN_DEFAULT_PASSWORD=
     ```
 
-3. Asegúrate de que la carpeta `data` y el archivo `yellow_tripdata_2021-01.csv` estén presentes en el directorio correcto.
+3. Asegúrate de que la carpeta `data` y el archivo `yellow_tripdata_2021-01.csv` (no necesariamente tiene que ser este CSV) estén presentes en el directorio correcto.
 
 4. Agrega las siguientes líneas a tu archivo `.gitignore` para evitar subir archivos sensibles y grandes:
 
